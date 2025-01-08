@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 Math Question Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 12px;
+            width: 100%;
+            background-color: #6A5ACD;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #5a4ac3;
+        }
+        #question {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #555;
+            word-wrap: break-word;
+            word-break: break-all;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Class 10 Math Question Generator</h1>
+    <button onclick="generateMathQuestion()">Generate Hard Math Question</button>
+    <div id="question"></div>
+</div>
+
+<script>
+    function generateMathQuestion() {
+        // Randomly generate different types of hard questions
+        
+        // Algebra Questions
+        var algebraQuestions = [
+            "Solve for x: 2x + 5 = 3x + 7",
+            "If x^2 - 5x + 6 = 0, find the value of x",
+            "Factorize: x^2 - 7x + 12",
+            "Solve for x: x^3 - 4x^2 + 5x - 2 = 0"
+        ];
+        
+        // Geometry Questions
+        var geometryQuestions = [
+            "Find the area of a triangle with sides 9 cm, 12 cm, and 15 cm (Use Heron's formula)",
+            "In a circle, if the radius is 14 cm, find the area (Use π = 22/7)",
+            "The perimeter of a rectangle is 50 cm. If the length is 15 cm, find the width.",
+            "In a right-angled triangle, if the base is 6 cm and the hypotenuse is 10 cm, find the height."
+        ];
+        
+        // Trigonometry Questions
+        var trigonometryQuestions = [
+            "Find the value of tan(45°) + cot(45°)",
+            "If sin θ = 1/2, find cos θ and tan θ",
+            "In a right-angled triangle, the base is 7 cm and the height is 24 cm. Find the hypotenuse.",
+            "Find sin(30°) + cos(60°) and verify the result."
+        ];
+        
+        // Probability Questions
+        var probabilityQuestions = [
+            "A die is rolled. What is the probability of getting a number greater than 4?",
+            "In a deck of 52 cards, what is the probability of drawing a red card?",
+            "A box contains 8 black and 6 white balls. One ball is drawn at random. What is the probability it is black?",
+            "If 3 coins are tossed, what is the probability of getting at least two heads?"
+        ];
+        
+        // Coordinate Geometry Questions
+        var coordinateGeometryQuestions = [
+            "Find the distance between points A(2, 3) and B(6, 7)",
+            "Find the midpoint of the line segment joining A(1, 2) and B(5, 6)",
+            "If the coordinates of two points are (2, -3) and (4, 2), find the slope of the line passing through them.",
+            "Find the area of the triangle formed by the points A(1, 2), B(4, 5), and C(6, 1)"
+        ];
+        
+        // Miscellaneous Advanced Questions
+        var advancedQuestions = [
+            "Solve for x: x^3 - 6x^2 + 11x - 6 = 0",
+            "Find the sum of the first 25 odd numbers",
+            "A train travels at 72 km/hr for 2 hours, then at 54 km/hr for 1 hour. Find the average speed of the train.",
+            "Find the value of (5^2 + 4^3) / (7 - 3)"
+        ];
+        
+        // Combine all questions
+        var allQuestions = algebraQuestions.concat(geometryQuestions, trigonometryQuestions, 
+                                                   probabilityQuestions, coordinateGeometryQuestions, advancedQuestions);
+        
+        // Pick a random question
+        var randomIndex = Math.floor(Math.random() * allQuestions.length);
+        var selectedQuestion = allQuestions[randomIndex];
+        
+        // Display the selected question
+        document.getElementById("question").textContent = "Math Question: " + selectedQuestion;
+    }
+</script>
+
+</body>
+</html>
